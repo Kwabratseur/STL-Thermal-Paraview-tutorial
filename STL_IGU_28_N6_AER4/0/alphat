@@ -1,0 +1,127 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      alphat;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 -1 -1 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+  inlet1
+  {
+      type            fixedValue;
+      value           $internalField;
+  }
+  inlet2
+  {
+      type            fixedValue;
+      value           $internalField;
+  }
+  outlet
+  {
+      type            inletOutlet;
+      inletValue      uniform 0;
+      value           uniform 0;
+  }
+  door
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  windowsmall
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  windowbig
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  columns
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  ceiling
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  floor
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  wallwindow
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  walldoor
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  walloutside
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  wallinside
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  emission_surface
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  n_001
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  n_002
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  n_003
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  n_004
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  n_005
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+  n_006
+  {
+    type            compressible::alphatWallFunction;
+    value           uniform 0;
+  }
+}
+
+// ************************************************************************* //
