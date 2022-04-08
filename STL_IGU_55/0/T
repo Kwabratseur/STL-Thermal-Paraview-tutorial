@@ -16,19 +16,19 @@ FoamFile
 
 dimensions      [0 0 0 1 0 0 0];
 
-internalField   uniform 288;
+internalField   uniform 293.15;
 
 boundaryField
 {
     inlet1
     {
       type  fixedValue;
-      value  uniform 290;
+      value  uniform 291.15;
     }
     inlet2
     {
       type  fixedValue;
-      value  uniform 290;
+      value  uniform 291.15;
     }
     outlet
     {
@@ -38,54 +38,84 @@ boundaryField
     }
     door
     {
-      type            fixedValue;
-      value  uniform          293.5;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 293.15;
+      value           $internalField;
     }
     windowsmall
     {
-      type            zeroGradient;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 5;
+      Ta              constant 278.15;
+      value           $internalField;
     }
     windowbig
     {
       type            fixedValue;
-      value  uniform          327;
+      value  uniform          323.15;
     }
     columns
     {
-      type            fixedValue;
-      value  uniform          289;
+      type            zeroGradient;
     }
     ceiling
     {
-        type            zeroGradient;
+        type            externalWallHeatFluxTemperature;
+        mode            coefficient;
+        h               uniform 0.137;
+        Ta              constant 278.15;
+        value           $internalField;
     }
     floor
     {
-        type            zeroGradient;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 293.15;
+      value           $internalField;
     }
     wallwindow
     {
-        type            fixedValue;
-        value           294.5;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 278.15;
+      value           $internalField;
     }
     walldoor
     {
-        type            fixedValue;
-        value           295.0;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 278.15;
+      value           $internalField;
     }
     walloutside
     {
-        type            fixedValue;
-        value           293.5;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 278.15;
+      value           $internalField;
     }
     wallinside
     {
-        type            fixedValue;
-        value           295.5;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 293.15;
+      value           $internalField;
     }
     emission_surface
     {
-        type            zeroGradient;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 293.15;
+      value           $internalField;
     }
 }
 

@@ -1,0 +1,103 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField;
+    location    "2700";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0.0307;
+
+boundaryField
+{
+    inlet1
+    {
+        type            zeroGradient;
+    }
+    inlet2
+    {
+        type            zeroGradient;
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    windowsmall
+    {
+        type            fixedValue;
+        value           uniform 0.0307;
+    }
+    door
+    {
+        type            fixedValue;
+        value           uniform 0.0307;
+    }
+    columns
+    {
+        type            fixedValue;
+        value           uniform 0.0307;
+    }
+    windowbig
+    {
+        type            fixedValue;
+        value           uniform 0.0307;
+    }
+    ceiling
+    {
+        type            fixedValue;
+        value           uniform 0.0307;
+    }
+    floor
+    {
+        type            fixedValue;
+        value           uniform 0.0307;
+    }
+    wallwindow
+    {
+        type            fixedValue;
+        value           uniform 0.0307;
+    }
+    walldoor
+    {
+        type            fixedValue;
+        value           uniform 0.0307;
+    }
+    walloutside
+    {
+        type            fixedValue;
+        value           uniform 0.0307;
+    }
+    wallinside
+    {
+        type            fixedValue;
+        value           uniform 0.0307;
+    }
+    emission_surface
+    {
+        type            fixedValue;
+        value           uniform 0.0307;
+    }
+    n_001
+    {
+        type            fixedValue;
+        value           uniform 0.0307;
+    }
+    n_002
+    {
+        type            fixedValue;
+        value           uniform 0.0307;
+    }
+}
+
+
+// ************************************************************************* //

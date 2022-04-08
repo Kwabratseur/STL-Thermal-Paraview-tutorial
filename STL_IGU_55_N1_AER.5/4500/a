@@ -1,0 +1,101 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField;
+    location    "4500";
+    object      a;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 -1 0 0 0 0 0];
+
+internalField   uniform 0.5;
+
+boundaryField
+{
+    inlet1
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    inlet2
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    outlet
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    windowsmall
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    door
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    columns
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    windowbig
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    ceiling
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    floor
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    wallwindow
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    walldoor
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    walloutside
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    wallinside
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    emission_surface
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+    n_001
+    {
+        type            calculated;
+        value           uniform 0.5;
+    }
+}
+
+
+// ************************************************************************* //

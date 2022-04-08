@@ -1,0 +1,137 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   uniform 293.15;
+
+boundaryField
+{
+    inlet1
+    {
+      type  fixedValue;
+      value  uniform 291.15;
+    }
+    inlet2
+    {
+      type  fixedValue;
+      value  uniform 291.15;
+    }
+    outlet
+    {
+      type            inletOutlet;
+      inletValue      $internalField;
+      value           $internalField;
+    }
+    door
+    {
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 293.15;
+      value           $internalField;
+    }
+    windowsmall
+    {
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 5;
+      Ta              constant 278.15;
+      value           $internalField;
+    }
+    windowbig
+    {
+      type            fixedValue;
+      value           uniform 301.15;
+    }
+    columns
+    {
+      type            zeroGradient;
+    }
+    ceiling
+    {
+        type            externalWallHeatFluxTemperature;
+        mode            coefficient;
+        h               uniform 0.137;
+        Ta              constant 278.15;
+        value           $internalField;
+    }
+    floor
+    {
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 298.15;
+      value           uniform 298.15;
+    }
+    wallwindow
+    {
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 278.15;
+      value           $internalField;
+    }
+    walldoor
+    {
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 278.15;
+      value           $internalField;
+    }
+    walloutside
+    {
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 278.15;
+      value           $internalField;
+    }
+    wallinside
+    {
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 293.15;
+      value           $internalField;
+    }
+    emission_surface
+    {
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 298.15;
+      value           uniform 298.15;
+    }
+    n_001
+    {
+      type            externalWallHeatFluxTemperature;
+      mode            power;
+      Q               130.0;
+      value           uniform 306.95;
+    }
+    n_002
+    {
+      type            externalWallHeatFluxTemperature;
+      mode            power;
+      Q               130.0;
+      value           uniform 306.95;
+    }
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,105 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField;
+    location    "3600";
+    object      epsilon;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -3 0 0 0 0];
+
+internalField   uniform 0.01;
+
+boundaryField
+{
+    inlet1
+    {
+        type            fixedValue;
+        value           uniform 0.00527333;
+    }
+    inlet2
+    {
+        type            fixedValue;
+        value           uniform 0.00527333;
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    windowsmall
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    door
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    columns
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    windowbig
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    ceiling
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    floor
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    wallwindow
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    walldoor
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    walloutside
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    wallinside
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    emission_surface
+    {
+        type            fixedValue;
+        value           uniform 0.00527333;
+    }
+    n_001
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    n_002
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+}
+
+
+// ************************************************************************* //

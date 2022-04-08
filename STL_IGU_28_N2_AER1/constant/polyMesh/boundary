@@ -1,0 +1,133 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+16
+(
+    inlet1
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          4;
+        startFace       737884;
+    }
+    inlet2
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          4;
+        startFace       737888;
+    }
+    outlet
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          16;
+        startFace       737892;
+    }
+    windowsmall
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          126;
+        startFace       737908;
+    }
+    door
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          112;
+        startFace       738034;
+    }
+    columns
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          31297;
+        startFace       738146;
+    }
+    windowbig
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          2160;
+        startFace       769443;
+    }
+    ceiling
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          1444;
+        startFace       771603;
+    }
+    floor
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          1960;
+        startFace       773047;
+    }
+    wallwindow
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          1539;
+        startFace       775007;
+    }
+    walldoor
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          1506;
+        startFace       776546;
+    }
+    walloutside
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          2229;
+        startFace       778052;
+    }
+    wallinside
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          2229;
+        startFace       780281;
+    }
+    emission_surface
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          753;
+        startFace       782510;
+    }
+    n_001
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          30915;
+        startFace       783263;
+    }
+    n_002
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          32018;
+        startFace       814178;
+    }
+)
+
+// ************************************************************************* //

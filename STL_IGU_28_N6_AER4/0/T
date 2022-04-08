@@ -23,12 +23,12 @@ boundaryField
     inlet1
     {
       type  fixedValue;
-      value  uniform 292;
+      value  uniform 291.15;
     }
     inlet2
     {
       type  fixedValue;
-      value  uniform 292;
+      value  uniform 291.15;
     }
     outlet
     {
@@ -38,11 +38,19 @@ boundaryField
     }
     door
     {
-      type            zeroGradient;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 293.15;
+      value           $internalField;
     }
     windowsmall
     {
-      type            zeroGradient;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 5;
+      Ta              constant 278.15;
+      value           $internalField;
     }
     windowbig
     {
@@ -55,61 +63,101 @@ boundaryField
     }
     ceiling
     {
-        type            zeroGradient;
+        type            externalWallHeatFluxTemperature;
+        mode            coefficient;
+        h               uniform 0.137;
+        Ta              constant 278.15;
+        value           $internalField;
     }
     floor
     {
-        type            zeroGradient;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 293.15;
+      value           $internalField;
     }
     wallwindow
     {
-        type            zeroGradient;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 278.15;
+      value           $internalField;
     }
     walldoor
     {
-        type            zeroGradient;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 278.15;
+      value           $internalField;
     }
     walloutside
     {
-        type            zeroGradient;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 278.15;
+      value           $internalField;
     }
     wallinside
     {
-        type            zeroGradient;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 293.15;
+      value           $internalField;
     }
     emission_surface
     {
-        type            zeroGradient;
+      type            externalWallHeatFluxTemperature;
+      mode            coefficient;
+      h               uniform 0.137;
+      Ta              constant 293.15;
+      value           $internalField;
     }
     n_001
     {
-        type            fixedValue;
-        value           uniform 306.95;
+      type            externalWallHeatFluxTemperature;
+      mode            power;
+      Q               130.0;
+      value           uniform 306.95;
     }
     n_002
     {
-        type            fixedValue;
-        value           uniform 306.95;
+      type            externalWallHeatFluxTemperature;
+      mode            power;
+      Q               130.0;
+      value           uniform 306.95;
     }
     n_003
     {
-        type            fixedValue;
-        value           uniform 306.95;
+      type            externalWallHeatFluxTemperature;
+      mode            power;
+      Q               130.0;
+      value           uniform 306.95;
     }
     n_004
     {
-        type            fixedValue;
-        value           uniform 306.95;
+      type            externalWallHeatFluxTemperature;
+      mode            power;
+      Q               130.0;
+      value           uniform 306.95;
     }
     n_005
     {
-        type            fixedValue;
-        value           uniform 306.95;
+      type            externalWallHeatFluxTemperature;
+      mode            power;
+      Q               130.0;
+      value           uniform 306.95;
     }
     n_006
     {
-        type            fixedValue;
-        value           uniform 306.95;
+      type            externalWallHeatFluxTemperature;
+      mode            power;
+      Q               130.0;
+      value           uniform 306.95;
     }
 }
 
