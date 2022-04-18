@@ -1,5 +1,9 @@
 # Thermal simulations STL and Paraview
 
+[![My GitHub Stats](https://github-readme-stats.vercel.app/api/?username=Kwabratseur&count_private=true&theme=tokyonight&showicons=true)]()
+[![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Kwabratseur&langs_count=5&theme=tokyonight)]()
+
+
 ![A picture containing text Description automatically
 generated](gfx/pvt1.png)
 
